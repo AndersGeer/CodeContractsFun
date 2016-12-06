@@ -1,0 +1,11 @@
+D:\Users\flaps_win10\RiderProjects\CodeContracts\CodeContracts\bin\Debug\CodeContracts.exe
+D:\Users\flaps_win10\RiderProjects\CodeContracts\CodeContracts\bin\Debug\CodeContracts.pdb
+D:\Users\flaps_win10\RiderProjects\CodeContracts\CodeContracts\bin\Debug\mscorlib.dll
+D:\Users\flaps_win10\RiderProjects\CodeContracts\CodeContracts\bin\Debug\normidna.nlp
+D:\Users\flaps_win10\RiderProjects\CodeContracts\CodeContracts\bin\Debug\normnfc.nlp
+D:\Users\flaps_win10\RiderProjects\CodeContracts\CodeContracts\bin\Debug\normnfd.nlp
+D:\Users\flaps_win10\RiderProjects\CodeContracts\CodeContracts\bin\Debug\normnfkc.nlp
+D:\Users\flaps_win10\RiderProjects\CodeContracts\CodeContracts\bin\Debug\normnfkd.nlp
+D:\Users\flaps_win10\RiderProjects\CodeContracts\CodeContracts\obj\Debug\CodeContracts.csprojResolveAssemblyReference.cache
+D:\Users\flaps_win10\RiderProjects\CodeContracts\CodeContracts\obj\Debug\CodeContracts.exe
+D:\Users\flaps_win10\RiderProjects\CodeContracts\CodeContracts\obj\Debug\CodeContracts.pdb
