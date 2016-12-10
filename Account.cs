@@ -1,12 +1,17 @@
 ﻿
 using System;
+using System.Collections.Generic;
 using System.Diagnostics.Contracts;
+using System.Dynamic;
 
 namespace CodeContracts
 {
     public class Account
     {
-        public int Balance { get; set; }
+        private static int _number = 1;
+        public double Balance { get; set; }
+        public int Number { get; set; }
+        private List<Movement> _movements;
 
         /// <summary>
         /// This method is supposed to run on every method call.
@@ -22,11 +27,23 @@ namespace CodeContracts
         /// Constructor with a balance added as parameter
         /// </summary>
         /// <param name="balance"></param>
-        public Account(int balance)
+        public Account(double balance)
         {
             //Acts as invariant for non-working invariant
             Contract.Requires<ArgumentException>(balance > 0, "Exception");
             Balance = balance;
+            Number = _number++;
+            _movements = new List<Movement>();
+        }
+
+        public void AddMovement(Movement move)
+        {
+            _movements.Add(move);
+        }
+
+        public List<Movement> getAllMovements()
+        {
+            return _movements;
         }
 
         /// <summary>
@@ -35,7 +52,7 @@ namespace CodeContracts
         /// Ensures added balance and result being more than 0
         /// </summary>
         /// <param name="balance"></param>
-        public void Deposit(int balance)
+        public void Deposit(double balance)
         {
             Contract.Requires(balance > 0, "Amount to deposit must be more than 0");
             Contract.Requires<ArgumentException>(balance > 0, "Exception");
@@ -52,7 +69,7 @@ namespace CodeContracts
         /// Ensures withdrawn balance and result being more than 0
         /// </summary>
         /// <param name="balance"></param>
-        public void Withdraw(int balance)
+        public void Withdraw(double balance)
         {
             Contract.Requires(balance > 0, "Amount to withdraw must be more than 0");
             Contract.Requires(balance < Balance);
