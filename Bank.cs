@@ -67,7 +67,8 @@ namespace CodeContracts
 
         public void MakeStatement(Customer cust, Account acc)
         {
-
+            AddCustomer(cust);
+            AddAccount(acc);
         }
     }
 }
