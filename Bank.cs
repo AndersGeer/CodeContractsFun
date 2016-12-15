@@ -4,8 +4,12 @@ using System.Runtime.CompilerServices;
 
 namespace CodeContracts
 {
+
+
+
     public class Bank
     {
+        public static List<Bank> Banks = new List<Bank>();
         public string Name { get; set; }
 
         private List<Customer> _customers;
@@ -16,9 +20,23 @@ namespace CodeContracts
             Name = name;
             _customers = new List<Customer>();
             _accounts = new List<Account>();
+            Banks.Add(this);
         }
 
-        public void AddCustomer(Customer cust)
+        public void NewCustomer(string name)
+        {
+            Customer c = new Customer(name);
+            AddCustomer(c);
+        }
+
+        public void NewAccount(double balance, Customer cust)
+        {
+            Account a = new Account(balance);
+            AddAccount(a);
+            cust?.AddAccount(a);
+        }
+
+        private void AddCustomer(Customer cust)
         {
             _customers.Add(cust);
         }

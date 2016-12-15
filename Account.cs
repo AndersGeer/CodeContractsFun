@@ -27,13 +27,15 @@ namespace CodeContracts
         /// Constructor with a balance added as parameter
         /// </summary>
         /// <param name="balance"></param>
-        public Account(double balance)
+        /// <param name="cust"></param>
+        protected internal Account(double balance)
         {
             //Acts as invariant for non-working invariant
             Contract.Requires<ArgumentException>(balance > 0, "Exception");
             Balance = balance;
             Number = _number++;
             _movements = new List<Movement>();
+
         }
 
         public void AddMovement(Movement move)

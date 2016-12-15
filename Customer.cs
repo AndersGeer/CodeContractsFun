@@ -9,7 +9,7 @@ namespace CodeContracts
         public string Name { get; set; }
         private List<Account> _accounts;
 
-        public Customer(string name)
+        protected internal Customer(string name)
         {
             Id = _id++;
             Name = name;
